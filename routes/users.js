@@ -114,6 +114,7 @@ return done(null, false, { message: 'Invalid password' });
 });
 }));
 /*--?--*/
+
 passport.serializeUser(function (user, done) {
 done(null, user.id);
 });

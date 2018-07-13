@@ -4,6 +4,7 @@ var router = express.Router();// set up express router
 
 
 // for homepage
+
 router.get('/', ensureAuthenticated, function (req, res) {  // get request route for home page to render index
     res.render('index');
 });

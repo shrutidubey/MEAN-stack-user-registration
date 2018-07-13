@@ -35,6 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // middleware for express-session
+
 app.use(session({
     secret: 'secret',
     saveUninitialized: true,
@@ -48,7 +49,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //middleware for express-validator
-
+// used for req.checkbody
 app.use(expressValidator({
     errorFormatter: function (param, msg, value) {
         var namespace = param.split('.')
